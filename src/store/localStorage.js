@@ -2,7 +2,7 @@ export const loadState = () => {
   try {
     const selectedEmployees = localStorage.getItem("selectedEmployees");
     if (selectedEmployees === null) {
-      return undefined;
+      return [];
     }
     return JSON.parse(selectedEmployees);
   } catch (err) {
@@ -12,8 +12,6 @@ export const loadState = () => {
 };
 
 export const saveState = (selectedEmployees) => {
-  // console.log("[saveState]");
-  // console.log(selectedEmployees);
   try {
     const serializedState = JSON.stringify(selectedEmployees);
     localStorage.setItem("selectedEmployees", serializedState);

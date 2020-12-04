@@ -30,38 +30,38 @@ export const fetchEmployees = () => {
 };
 
 export const selectEmployee = (id) => {
-  // get ids from localstorage
   const selectedEmployees = loadState();
+  let updatedEmployees;
 
-  if (selectedEmployees.includes(id)) {
-    // add id to array
-    const updatedEmployees = selectedEmployees.concat(id);
-
-    // set localstorage
+  if (!selectedEmployees.includes(id)) {
+    updatedEmployees = selectedEmployees.concat(id);
     saveState(updatedEmployees);
+  } else {
+    updatedEmployees = selectedEmployees;
   }
 
   return {
     type: actionTypes.SELECT_EMPLOYEE,
-    id: id,
+    updatedEmployees: updatedEmployees,
   };
 };
 
 export const unselectEmployee = (id) => {
-  // get ids from localstorage
   const selectedEmployees = loadState();
+  let updatedEmployees;
 
-  // check if employee id was already selected
   if (selectedEmployees.includes(id)) {
-    // remove id from array
-    selectedEmployees.splice(id, 1);
+    const index = selectedEmployees.indexOf(id);
+    selectedEmployees.splice(index, 1);
 
-    // set localstorage
-    saveState(selectedEmployees);
+    updatedEmployees = selectedEmployees;
+    saveState(updatedEmployees);
+  } else {
+    updatedEmployees = selectedEmployees;
   }
 
   return {
     type: actionTypes.UNSELECT_EMPLOYEE,
-    id: id,
+    updatedEmployees: updatedEmployees,
   };
 };

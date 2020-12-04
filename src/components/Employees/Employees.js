@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import Letter from "../components/Letter/Letter";
-import * as actions from "../store/actions";
+import Letter from "../Letter/Letter";
+import * as actions from "../../store/actions";
 
 function Employees() {
   const alphabet = useSelector((state) => state.alphabet);
@@ -53,9 +53,9 @@ function Employees() {
 
   return (
     <div className="employees-list">
-      <h2>Employees </h2>
+      <h1>Employees </h1>
       <hr />
-      <div className="Letters">{letters}</div>
+      <div className="Letters container">{letters}</div>
     </div>
   );
 }

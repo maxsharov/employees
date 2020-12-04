@@ -8,7 +8,7 @@ const EmployeesBirthday = () => {
 
   let employeesByMonth = [];
 
-  if (selectedEmployees.length && employeesFetched) {
+  if (selectedEmployees.length && employeesFetched.length) {
     const emplyeesObjects = employeesFetched
       .filter((employee) => selectedEmployees.includes(employee.id))
       .map((employee) => {
@@ -60,7 +60,7 @@ const EmployeesBirthday = () => {
       <h2>Employees birthday </h2>
       <hr />
       {employeesByMonth.length ? (
-        <div className="months">{employeesByMonth}</div>
+        <div className="months container">{employeesByMonth}</div>
       ) : (
         <p>No selected employees</p>
       )}

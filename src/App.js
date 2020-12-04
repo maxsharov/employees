@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Employees from "./containers/Employees";
+import Employees from "./components/Employees/Employees";
 import EmployeesBirthday from "./components/EmployeesBirthday/EmployeesBirthday";
 
 import "./App.css";

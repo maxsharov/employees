@@ -2,24 +2,11 @@
   display: flex;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
+h1,
+h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 20px 0;
 }
 
 .Letters {
@@ -27,14 +14,16 @@
   flex-wrap: wrap;
 }
 .Letter {
-  width: 300px;
-  padding: 10px;
-  margin: 10px auto;
+  width: 31%;
+  padding: 20px;
+  margin: 10px;
   box-sizing: border-box;
-
   border: 1px solid #eee;
   box-shadow: 0 2px 3px #ccc;
   text-align: left;
+}
+.container h3 {
+  margin: 0 0 15px;
 }
 
 .employees-list {
@@ -56,8 +45,12 @@
 .month {
   border: 1px solid #eee;
   box-shadow: 0 2px 3px #ccc;
-  padding: 10px;
   margin: 10px;
   box-sizing: border-box;
   width: 100%;
+  padding: 20px;
+}
+
+ul {
+  padding: 0 0 0 20px;
 }
