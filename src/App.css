@@ -9,6 +9,10 @@ h2 {
   margin: 20px 0;
 }
 
+.employees-list {
+  width: 70%;
+  margin: 0 20px;
+}
 .Letters {
   display: flex;
   flex-wrap: wrap;
@@ -24,11 +28,6 @@ h2 {
 }
 .container h3 {
   margin: 0 0 15px;
-}
-
-.employees-list {
-  width: 70%;
-  margin: 0 20px;
 }
 
 .employees-birthdays {
